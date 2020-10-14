@@ -88,6 +88,7 @@ You can give the grid lines a name by using **bracket syntax**. For *better read
                       [main-end footer-start] 100px 
                       [footer-end];
 }
+
 .item {
   grid-column: 2 / grid-end;
   grid-row: box-start / main-end;
@@ -96,7 +97,29 @@ You can give the grid lines a name by using **bracket syntax**. For *better read
 
 ### Naming Grid Areas
 
--- TODO
+Instead of using the grid lines, you can use named areas for positioning the items.  This can be done by adding the property `grid-template-areas`. 
+
+It is important that **every named grid area forms a rectangle**. By using a period as a name you can define an **empty grid cell**. 
+For better readability, the names are separated with a tab (or a lot of spaces).
+
+````css
+.container {
+    grid-template-rows: 100px 200px 400px 100px;
+    grid-template-columns: repeat(3, 1fr) 200px;    
+    grid-template-areas: "  . 	head 	head	. "
+                         "box-1 box-2 	box-3 	side"
+                         "main  main  	main  	side"
+                         "foot  foot  	foot  	foot";
+}
+````
+
+## Implicit and Explicit Grid
+
+-- TODO: explanation
+
+## Grid Examples from Practice
+
+-- TODO: add common use-cases and examples
 
 ## Links
 

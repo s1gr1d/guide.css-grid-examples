@@ -1,0 +1,43 @@
+.container-3 {
+    background-color: #eee;
+    width: 70em;
+    margin: 2rem auto;
+    
+    display: grid;
+    grid-template-rows: 100px 200px 400px 100px;
+    grid-template-columns: repeat(3, 1fr) 200px;
+    grid-gap: 2em;
+    
+    grid-template-areas: "  .   head  head    . "
+                         "box-1 box-2 box-3 side"
+                         "main  main  main  side"
+                         "foot  foot  foot  foot";
+}
+    
+.container-3 > * {
+    padding: 1em;
+    background-color: olivedrab;
+    color: white;
+    font-size: 2rem;
+}
+    
+.container-3 > .header {
+      grid-area: head;
+}
+
+.container-3 > .small-box-1 { grid-area: box-1; }
+.container-3 > .small-box-2 { grid-area: box-2; }
+.container-3 > .small-box-3 { grid-area: box-3; }
+
+
+.container-3 > .sidebar {
+    grid-area: side;
+}
+
+.container-3 > .main-content {
+    grid-area: main;
+}
+
+.container-3 > .footer {
+    grid-area: foot;
+}

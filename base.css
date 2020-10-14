@@ -1,0 +1,26 @@
+:root {
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+/* -> INFO: when using a top-level page layout grid, the grid should be defined here */
+
+
+/* just custom styling */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}    
+
+h1 {
+    text-align: center;
+    margin: 1em 0;
+}

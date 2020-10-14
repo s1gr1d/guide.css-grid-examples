@@ -1,0 +1,38 @@
+.container-2 {
+  background-color: #eee;
+  width: 70em;
+  margin: 2rem auto;
+  
+  display: grid;
+  grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
+  grid-template-rows: [header-start] 100px 
+                      [header-end box-start] 200px 
+                      [box-end main-start] 400px 
+                      [main-end footer-start] 100px 
+                      [footer-end];
+  grid-gap: 1.5em;
+}
+  
+.container-2 > * {
+  padding: 1em;
+  background-color: teal;
+  color: white;
+  font-size: 2rem;
+}
+
+.container-2 > .header {
+  grid-column: col-start 1 / grid-end;
+}
+
+.container-2 > .sidebar {
+  grid-column: col-end 3 / grid-end;
+  grid-row: box-start / main-end;
+}
+
+.container-2 > .main-content {
+  grid-column: col-start 1 / col-end 3;
+}
+
+.container-2 > .footer {
+  grid-column: col-start 1 / grid-end;
+}
