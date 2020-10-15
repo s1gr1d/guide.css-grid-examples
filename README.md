@@ -2,6 +2,8 @@
 
 The CSS-Grid lets you define a two-dimensional layout of columns and rows. You can then place elements within the grid, which may fill one cell or multiple columns or rows.
 
+
+
 ## Grid Terminology
 
 - **Grid Container:** The element on which `display: grid` is applied. It's the direct parent of all grid items.
@@ -12,6 +14,8 @@ The CSS-Grid lets you define a two-dimensional layout of columns and rows. You c
 - **Grid Area:** One or more adjacent grid cells that define a rectangle.
 
 ![grid-parts-terms](images/grid-parts-terms.png)
+
+
 
 ## A basic grid
 
@@ -44,6 +48,8 @@ Result:
 
 ![basic-grid](images/basic-grid.png)
 
+
+
 ## Positioning Grid Items
 
 Grid items are positioned with `grid-row` and `grid-column`. 
@@ -68,15 +74,20 @@ For **spanning the item over a specific area**, you can write following syntax t
 
 `span` tells the browser how many grid tracks the item should span, without specifying an explicit grid line. As the last grid line in the grid has the number `-1`, we can **span an item all over** e.g. a row track with `grid-column: 1 / -1`.
 
+
+
 ## Alternate Syntaxes
 
-You can position the items on the grid by naming the **grid lines** or the **grid areas**. Choosing between these two and the standard syntax is a matter of preference. 
+You can position the items on the grid by naming the **grid lines** or the **grid areas**. The choice between these two and the standard syntax is a matter of preference and also depends on the use case.
 
 In summary, there are three different syntaxes: line numbers, named grid lines, named grid areas.
 
+
+
 ### Naming Grid Lines
 
-You can give the grid lines a name by using **bracket syntax**. For *better readability*, you can add *line breaks and indentation*. It is best practice to write a name that describes the name of the content in the track.
+You can give the grid lines a name by  **using bracket syntax**. For *better readability*, you can add *line breaks and indentation*. 
+It is best practice to write a name that describes the content in the track next to the grid line. One grid line can have **more than one name** - for example when the line is the end of a specific content *and* the start.
 
 ```css
 .container {
@@ -89,11 +100,32 @@ You can give the grid lines a name by using **bracket syntax**. For *better read
                       [footer-end];
 }
 
-.item {
+.item--main {
   grid-column: 2 / grid-end;
-  grid-row: box-start / main-end;
+  grid-row: main-start / main-end;
 }
 ```
+
+##### -- Named set of grid lines --
+
+When using the `repeat()` function, you can have **multiple lines with the same name**. The example below creates six named lines, alternately named `col-a-start` and `col-b-start` (and the matching "end"-name). We get two columns 3 times, so we have 6 named lines.
+
+To access the lines later (in an item), add a **number after the line-name**, which indicates to **which instance of that line** you refer to. The following CSS places the element starting in the second line named `col-a-start` and ending in the third line named `col-b-end`.
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 	[col-a-start] 1fr 
+      								[col-a-end col-b-start] 2fr 
+      								[col-b-end]);
+}
+
+.item {
+    grid-column: col-a-start 2 / col-b-end 3;
+}
+```
+
+
 
 ### Naming Grid Areas
 
@@ -113,13 +145,19 @@ For better readability, the names are separated with a tab (or a lot of spaces).
 }
 ````
 
+
+
 ## Implicit and Explicit Grid
 
 -- TODO: explanation
 
+
+
 ## Grid Examples from Practice
 
 -- TODO: add common use-cases and examples
+
+
 
 ## Links
 

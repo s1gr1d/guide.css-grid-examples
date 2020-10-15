@@ -22,6 +22,7 @@
 
 .container-2 > .header {
   grid-column: col-start 1 / grid-end;
+  grid-row: header-start / header-end;
 }
 
 .container-2 > .sidebar {
