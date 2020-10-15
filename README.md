@@ -149,9 +149,46 @@ For better readability, the names are separated with a tab (or a lot of spaces).
 
 ## Implicit and Explicit Grid
 
--- TODO: explanation
+If you are for example working with a large number of items you want to place in a grid or getting an initially undefined number of items from a database, it would not quite possible to place each item explicitly. In such a case it makes more sense to define a grid loosely and **let the placement algorithm fill it** for you.
+
+By using the `grid-template-*` properties, you define the **explicit grid**. But grid items can still be placed outside of these explicit defined grid tracks. Those items will be handled by the **implicit grid**.
+
+The **meaning of the negative numbers is not changed** by the implicit grid. The negative grid-line numbers always refer to the explicit grid.
+
+If we have more grid items than we have space for, CSS automatically adds more tracks to the grid to place the items. Implicit grid tracks have the **size `auto`**, so they grow to the size necessary to fit the content of the grid items.
+
+In this example we define a 2x2 grid and let the placement algorithm fill the remaining places. 
+
+```css
+.container {
+    display: grid;
+    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(2, 300px);
+    grid-gap: 30px;
+    
+    /* height: 1000px;  
+       --> if we would define a height, the items in the implicit grid use more height to 			 fill the 1000px
+    */    
+}
+```
 
 
+
+![implicit_explicit](images\implicit_explicit.png)
+
+
+
+#### -- Position auto-placed items --
+
+The items are added as rows per default. We can change how the auto-placed items get flowed into the grid by using the **`grid-auto-flow` property**. For example, `grid-auto-flow: column` will add columns instead of rows. You can also use the keyword `dense` to let the algorithm fill the gaps in the grid, even if this would change the order of some grid items.
+
+The right image would be an example for `grid-auto-flow: row dense` (from MDN):
+
+![row-dense](images\row-dense.png)
+
+#### -- Sizing the implicit tracks --
+
+If we want the tracks to have a defined height or width we can use the **properties `grid-auto-rows` and `grid-auto-columns`** and define a specific height (like `200px`) or use the `minmax()` function, to define a size range from a minimum- to a maximum-value
 
 ## Grid Examples from Practice
 
