@@ -1,11 +1,11 @@
 .container-3 {
-    background-color: #eee;
+    background-color: #ddd;
     width: 70em;
     margin: 2rem auto;
     
     display: grid;
-    grid-template-rows: 100px 200px 400px 100px;
     grid-template-columns: repeat(3, 1fr) 200px;
+    grid-template-rows: 100px 200px 400px 100px;
     grid-gap: 2em;
     
     grid-template-areas: "  .   head  head    . "

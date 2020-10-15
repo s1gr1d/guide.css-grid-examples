@@ -1,13 +1,12 @@
 .container {
-    background-color: #eee;
-    width: 70em;
-    margin: 2rem auto;
+    background-color: #ddd;
+    margin: 2rem 4rem;
     
     display: grid;
     /* REPEAT FUNCTION
-    grid-template-rows: 150px 150px; */
-    grid-template-rows: repeat(2, 150px); 
+    grid-template-columns: 1fr 1fr 1fr; */
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px); 
       
     /* GAP FOR EACH ROW AND COLUMN
     grid-row-gap: 30px; 
