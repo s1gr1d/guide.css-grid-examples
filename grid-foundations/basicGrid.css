@@ -6,7 +6,7 @@
     /* REPEAT FUNCTION
     grid-template-columns: 1fr 1fr 1fr; */
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 150px); 
+    grid-template-rows: repeat(4, 150px); 
       
     /* GAP FOR EACH ROW AND COLUMN
     grid-row-gap: 30px; 
@@ -21,6 +21,7 @@
     color: white;
 }
     
+/* item-1 overlaps item-3 */
 .container > .item-1 {
     background-color: orangered;
     grid-row: 2 / 3;
@@ -28,12 +29,14 @@
     z-index: 10;
 }
 
+/* as this item spans over all columns, the placement algorithm puts it in the first full-empty row */
+/* -1 spans to the end of the explicit grid */
 .container > .item-2 {
     background-color: yellowgreen;
-    /* spans to the end of the grid */
     grid-column: 1 / -1;
 }
 
+/* item-3 is overlapped by item-1 because of the z-index */
 .container > .item-3 {
     background-color: blueviolet;
     grid-column: 1 / 3;
