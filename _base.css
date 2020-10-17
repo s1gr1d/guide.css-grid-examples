@@ -24,3 +24,32 @@ h1 {
     text-align: center;
     margin: 1em 0;
 }
+
+.button {
+    display: block;
+
+    width: 160px;
+    height: min-content;
+    padding: 0.7em; 
+    margin: 3rem auto;
+
+    border: 2px solid olivedrab;
+    border-radius: 1em;
+    background-color: olivedrab;
+    box-shadow: 0px 0px 2px 0px #333333; 
+
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    color: olivedrab; 
+    border-color: olivedrab;
+    background-color: white;
+    box-shadow: 0px 0px 2px 0px #333333;
+}
+
