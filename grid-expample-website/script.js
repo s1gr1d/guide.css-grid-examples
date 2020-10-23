@@ -13,7 +13,7 @@ const showSection = (className) => {
     showRelevantSections();
 
     const section = document.querySelector(className);
-    section.style.display = 'block'
+    section.style.display = ''
 }
 
 window.addEventListener('DOMContentLoaded', (_e) => {

@@ -192,7 +192,7 @@ If we want the tracks to have a defined height or width we can use the **propert
 
 ## Grid Examples from Practice
 
-All those examples can are implemented in the grid-example-website folder.
+All those examples are implemented in the grid-example-website folder.
 
 #### Creating an Overall Layout (media-queries)
 
@@ -223,6 +223,42 @@ We can get such a layout with defining it with **template-areas and media-querie
                                 "content"
                                 "footer";
     }
+}
+```
+
+
+
+#### Placing a full-bleed content between paragraphs
+
+Sometime, we need to place content that spans all over the width of a site, while the other content stays in the middle.
+
+![full-bleed](images\full-bleed.png)
+
+Research has shown that the **ideal line-length is 65 characters**, so the main column should have a width of 65ch.
+
+To define such a layout, we create **3 columns**: one for the content in the middle and two for the spaces on the right and left side.
+
+We use the **minmax()** function here to keep the content responsive. On small screens, we still have some space (2rem) on the left and right side of the page. Without the minmax() function, the content would not be responsive.
+
+```css
+.full-bleed {
+    display: grid;
+    grid-template-columns:  [full-start] minmax(2rem, 1fr)  
+                            [main-start] minmax(min-content, 65ch) 
+                            [main-end]  minmax(2rem, 1fr) 
+                            [full-end]; 
+}
+
+.full-bleed > img {
+    grid-column: full-start / full-end;
+
+    width: 100%;
+}
+
+.full-bleed > p {
+    grid-column: main-start / main-end;
+
+    margin: 2em 0; /* top/bottom margin */
 }
 ```
 
