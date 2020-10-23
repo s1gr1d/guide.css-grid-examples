@@ -21,7 +21,7 @@ The CSS-Grid lets you define a two-dimensional layout of columns and rows. You c
 
 Following code creates a 2x2 grid with green items. A grid container always **behaves like a block display element**, filling 100% of the available width. After declaring the grid-template properties, the grid gets filled with the children of the container.
 
-The **length unit `fr` (fraction)** behaves like the `flex-grow` factor in flexbox and slices the grid up into proportional columns or rows. You could also define the columns/rows in this example with  `25%` percent each, but this has two issues: we have to calculate the amount of percent by ourselves and by adding a `grid-grap` we get problems with overflow, as our grid gets wider as `100%`.
+The **length unit `fr` (fraction)** behaves like the `flex-grow` factor in flexbox and slices the grid up into proportional columns or rows. You could also define the columns/rows in this example with  `25%` percent each, but this has two issues: we have to calculate the amount of percent by ourselves and by adding a `grap` we get problems with overflow, as our grid gets wider as `100%`.
 
 ```html
 <div class="container">
@@ -37,7 +37,7 @@ The **length unit `fr` (fraction)** behaves like the `flex-grow` factor in flexb
     display: grid;
     grid-template-columns: 130px 1fr;
     grid-template-rows: 1fr 1fr; 
-    grid-gap: 0.5em;
+    gap: 0.5em;
 }
 .container > * {
     padding: 2em;

@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 100px);
-    grid-gap: 2em;
+    gap: 2em;
 
     /* height: 1000px; */
     

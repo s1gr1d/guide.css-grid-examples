@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr) 200px;
     grid-template-rows: 100px 200px 400px 100px;
-    grid-gap: 2em;
+    gap: 2em;
     
     grid-template-areas: "  .   head  head    . "
                          "box-1 box-2 box-3 side"

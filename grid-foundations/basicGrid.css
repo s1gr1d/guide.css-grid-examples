@@ -11,7 +11,7 @@
     /* GAP FOR EACH ROW AND COLUMN
     grid-row-gap: 30px; 
     grid-column-gap: 50px; */
-    grid-gap: 2em;
+    gap: 2em;
   }
   
 .container > .item {
