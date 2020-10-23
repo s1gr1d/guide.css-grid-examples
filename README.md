@@ -192,9 +192,43 @@ If we want the tracks to have a defined height or width we can use the **propert
 
 ## Grid Examples from Practice
 
--- TODO: add common use-cases and examples
+All those examples can are implemented in the grid-example-website folder.
+
+#### Creating an Overall Layout (media-queries)
+
+The overall composition of our page should look like this on desktop and on mobile:
+
+![overall-layout](images\overall-layout.png)
+
+To accomplish such a layout, we have to define a column with a **fixed width for the menu** and a column for the content. The menu should switch to the top, when the screen gets smaller.  For the footer, we can just use the `min-content` value.
+
+We can get such a layout with defining it with **template-areas and media-queries**.
+
+```css
+.page-container {
+    height: 100vh;
+    
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    grid-template-rows: 1fr min-content;
+    grid-template-areas:    "menu   content "
+                            "footer footer  ";
+}
+
+@media only screen and (max-width: 800px) {
+    .page-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 5rem 1fr min-content;
+        grid-template-areas:    "menu"
+                                "content"
+                                "footer";
+    }
+}
+```
 
 
+
+#### fixed columns that shrink with the viewport
 
 ## Links
 

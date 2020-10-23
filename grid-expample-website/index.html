@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Examples</title>
+    <link rel="stylesheet" href="_base.css" type="text/css">
+    <link rel="stylesheet" href="full-bleed.css" type="text/css">
+  </head>
+  <body class="page-container">
+
+    <nav class="menu">
+      <ul>
+        <li><button onclick="showSection('.full-bleed')">Full Bleed</button></li>
+        <li><button onclick="showSection('.six-cards')">Six Cards</button></li>
+        <li><button onclick="showSection('.gallery')">Gallery</button></li>
+      </ul> 
+
+    </nav>
+
+    <section class="content">
+      <section class="full-bleed">
+        <img src="https://picsum.photos/1920/1080" alt="Item Picture 1" class="card__image">
+
+      </section>
+      <section class="six-cards">
+        <div class="card">
+          <img src="https://avatars.dicebear.com/api/human/1.svg" alt="Avatar 1" class="card__avatar">
+          <img src="https://picsum.photos/200/300" alt="Item Picture 1" class="card__image">
+  
+          <div class="card___feature">
+            <img class="card___check-icon" src="assets/check-circle.svg">
+            <p>Feature</p>
+          </div>
+          <div class="card___feature">
+            <img class="card___check-icon" src="assets/check-circle.svg">
+            <p>Feature</p>
+          </div>
+          <div class="card___feature">
+            <img class="card___check-icon" src="assets/check-circle.svg">
+            <p>Feature</p>
+          </div>
+          <div class="card___feature">
+            <img class="card___check-icon" src="assets/check-circle.svg">
+            <p>Feature</p>
+          </div>
+          <button class="button card__button">PICK</button>
+        </div>
+
+      </section>
+      <section class="gallery">
+      Gallery
+
+      </section>
+
+    </section>
+
+    <footer class="footer"> 
+      <a href="../index.html" class="button">Go back</a>
+    </footer>
+
+    <!--- HERO
+    <section class="hero">
+      <img src="https://picsum.photos/1920/1080" alt="Item Picture 1" class="card__image">
+    </section>
+    -->
+
+     <!--- SIX CARDS
+    <section class="six-cards">
+      <div class="card">
+        <img src="https://avatars.dicebear.com/api/human/1.svg" alt="Avatar 1" class="card__avatar">
+        <img src="https://picsum.photos/200/300" alt="Item Picture 1" class="card__image">
+
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <button class="button card__button">PICK</button>
+      </div>
+
+      
+      <div class="card">
+        <img src="https://avatars.dicebear.com/api/human/2.svg" alt="Avatar 1" class="card__avatar">
+        <img src="https://picsum.photos/200/300" alt="Item Picture 1" class="card__image">
+
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <button class="button card__button">PICK</button>
+      </div>
+
+      <div class="card">
+        <img src="https://avatars.dicebear.com/api/human/3.svg" alt="Avatar 1" class="card__avatar">
+        <img src="https://picsum.photos/200/300" alt="Item Picture 1" class="card__image">
+
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <button class="button card__button">PICK</button>
+      </div>
+
+      <div class="card">
+        <img src="https://avatars.dicebear.com/api/human/4.svg" alt="Avatar 1" class="card__avatar">
+        <img src="https://picsum.photos/200/300" alt="Item Picture 1" class="card__image">
+
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <button class="button card__button">PICK</button>
+      </div>
+
+      <div class="card">
+        <img src="https://avatars.dicebear.com/api/human/5.svg" alt="Avatar 1" class="card__avatar">
+        <img src="https://picsum.photos/200/300" alt="Item Picture 1" class="card__image">
+
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <button class="button card__button">PICK</button>
+      </div>
+
+      <div class="card">
+        <img src="https://avatars.dicebear.com/api/human/6.svg" alt="Avatar 1" class="card__avatar">
+        <img src="https://picsum.photos/200/300" alt="Item Picture 1" class="card__image">
+
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <div class="card___feature">
+          <img class="card___check-icon" src="assets/check-circle.svg">
+          <p>Feature</p>
+        </div>
+        <button class="button card__button">PICK</button>
+      </div>
+  </section>
+  -->
+
+  <!--- GALLERY
+    <section class="gallery">
+      <figure class="gallery__item gallery__item--1"><img src="img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--2"><img src="img/gal-2.jpeg" alt="Gallery image 2" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--3"><img src="img/gal-3.jpeg" alt="Gallery image 3" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--4"><img src="img/gal-4.jpeg" alt="Gallery image 4" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--5"><img src="img/gal-5.jpeg" alt="Gallery image 5" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--6"><img src="img/gal-6.jpeg" alt="Gallery image 6" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--7"><img src="img/gal-7.jpeg" alt="Gallery image 7" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--8"><img src="img/gal-8.jpeg" alt="Gallery image 8" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--9"><img src="img/gal-9.jpeg" alt="Gallery image 9" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--10"><img src="img/gal-10.jpeg" alt="Gallery image 10" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--11"><img src="img/gal-11.jpeg" alt="Gallery image 11" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--12"><img src="img/gal-12.jpeg" alt="Gallery image 12" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--13"><img src="img/gal-13.jpeg" alt="Gallery image 13" class="gallery__img"></figure>
+      <figure class="gallery__item gallery__item--14"><img src="img/gal-14.jpeg" alt="Gallery image 14" class="gallery__img"></figure>
+    </section>
+-->
+
+    <script src="script.js"></script> 
+  </body>
+</html>
