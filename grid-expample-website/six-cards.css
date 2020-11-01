@@ -23,7 +23,7 @@
 }
 
 .card {
-    background-color: var(--color-grey);
+    background-color: var(--color-lavender);
 
     display: grid;
     row-gap: 2rem;

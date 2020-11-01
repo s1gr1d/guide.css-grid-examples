@@ -3,11 +3,13 @@
     box-sizing: border-box;
 
     /* COLORS */
-    --color-olive: #A5A58D;
+    --color-olive: #9C9C81;
     --color-sand: #DDBEA9;
     --color-creme: #F0EFEB;
     --color-black: #1D120B;
-    --color-grey: #7d7d7d;
+    --color-grey:#7d7d7d;
+    --color-lavender: #705C6A;
+    --color-coffee: #3A2D32;
 }
 
 *,
@@ -75,7 +77,6 @@ h1 {
     border: none;
     border-radius: 1em;
     background-color: var(--color-creme);
-    box-shadow: 0px 0px 20px 0px var(--color-grey);
 
     color: var(--color-black);
     text-decoration: none;
