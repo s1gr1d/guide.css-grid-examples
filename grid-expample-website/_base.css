@@ -74,20 +74,20 @@ h1 {
 
     border: none;
     border-radius: 1em;
-    background-color: var(--color-sand);
+    background-color: var(--color-creme);
     box-shadow: 0px 0px 20px 0px var(--color-grey);
 
-    color: var(--color-creme);
+    color: var(--color-black);
     text-decoration: none;
     text-align: center;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     box-sizing: border-box;
 }
 
 .button:hover {
-    color: var(--color-sand);
-    border-color: var(--color-sand);
+    color: var(--color-black);
+    border-color: var(--color-black);
     background-color: var(--color-creme);
 }
 

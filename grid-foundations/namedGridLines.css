@@ -1,6 +1,6 @@
 .container-2 {
   background-color: #ddd;
-  width: 70em;
+  width: 90vw;
   margin: 2rem auto;
   
   display: grid;
@@ -10,7 +10,7 @@
                       [box-end main-start] 400px 
                       [main-end footer-start] 100px 
                       [footer-end];
-  grid-gap: 1.5em;
+  gap: 1.5em;
 }
   
 .container-2 > * {

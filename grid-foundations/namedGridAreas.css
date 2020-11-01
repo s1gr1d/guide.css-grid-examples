@@ -1,17 +1,24 @@
 .container-3 {
     background-color: #ddd;
-    width: 70em;
+    width: 90vw;
     margin: 2rem auto;
     
     display: grid;
     grid-template-columns: repeat(3, 1fr) 200px;
-    grid-template-rows: 100px 200px 400px 100px;
-    grid-gap: 2em;
+    grid-template-rows: 7em 14em 30em 7em;
+    gap: 2em;
     
     grid-template-areas: "  .   head  head    . "
                          "box-1 box-2 box-3 side"
                          "main  main  main  side"
                          "foot  foot  foot  foot";
+}
+
+@media only screen and (max-width: 800px) {
+    .container-3 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 7em) repeat(2, 14em) 30em 7em;
+    }
 }
     
 .container-3 > * {

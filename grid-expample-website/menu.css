@@ -1,0 +1,27 @@
+.menu > ul {
+    list-style-type: none;
+    margin: 1em 0;
+
+    display: grid;
+    grid-gap: 1em 0; /* just row gap */
+    justify-items: center; 
+    align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .menu > ul {
+        margin: 1em 1em;
+
+        justify-content: start;
+        grid-auto-flow: column;
+        grid-gap: 0 1em;
+    }
+}
+
+.menu > ul > li > button {
+    width: min-content;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+}

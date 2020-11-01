@@ -21,7 +21,7 @@ The CSS-Grid lets you define a two-dimensional layout of columns and rows. You c
 
 Following code creates a 2x2 grid with green items. A grid container always **behaves like a block display element**, filling 100% of the available width. After declaring the grid-template properties, the grid gets filled with the children of the container.
 
-The **length unit `fr` (fraction)** behaves like the `flex-grow` factor in flexbox and slices the grid up into proportional columns or rows. You could also define the columns/rows in this example with  `25%` percent each, but this has two issues: we have to calculate the amount of percent by ourselves and by adding a `grid-grap` we get problems with overflow, as our grid gets wider as `100%`.
+The **length unit `fr` (fraction)** behaves like the `flex-grow` factor in flexbox and slices the grid up into proportional columns or rows. You could also define the columns/rows in this example with  `25%` percent each, but this has two issues: we have to calculate the amount of percent by ourselves and by adding a `grap` we get problems with overflow, as our grid gets wider as `100%`.
 
 ```html
 <div class="container">
@@ -37,7 +37,7 @@ The **length unit `fr` (fraction)** behaves like the `flex-grow` factor in flexb
     display: grid;
     grid-template-columns: 130px 1fr;
     grid-template-rows: 1fr 1fr; 
-    grid-gap: 0.5em;
+    gap: 0.5em;
 }
 .container > * {
     padding: 2em;
@@ -155,7 +155,7 @@ By using the `grid-template-*` properties, you define the **explicit grid**. But
 
 The **meaning of the negative numbers is not changed** by the implicit grid. The negative grid-line numbers always refer to the explicit grid.
 
-If we have more grid items than we have space for, CSS automatically adds more tracks to the grid to place the items. Implicit grid tracks have the **size `auto`**, so they grow to the size necessary to fit the content of the grid items.
+If we have more grid items than we have space for, CSS automatically adds more tracks to the grid to place the items. **Implicit grid tracks have the size `auto`**, so they grow to the size necessary to fit the content of the grid items.
 
 In this example we define a 2x2 grid and let the placement algorithm fill the remaining places. 
 
@@ -226,6 +226,12 @@ We can get such a layout with defining it with **template-areas and media-querie
 }
 ```
 
+With CSS grid we can create awesome layouts **without media queries** (thanks to `minmax()`, `auto-fit` and `auto-fill`), but they are not dead. We should rather think about them differently.
+
+> #### Don’t Target Devices, Add Breakpoints When The Design Breaks
+>
+> [Article from Rachel Andrew](https://www.smashingmagazine.com/2018/02/media-queries-responsive-design-2018/)
+
 
 
 #### Placing a full-bleed content between paragraphs
@@ -234,7 +240,7 @@ Sometime, we need to place content that spans all over the width of a site, whil
 
 ![full-bleed](images\full-bleed.png)
 
-Research has shown that the **ideal line-length is 65 characters**, so the main column should have a width of 65ch.
+Research has shown that the **ideal line-length for reading is 45-85 characters**, so we give the main column a width of 70ch.
 
 To define such a layout, we create **3 columns**: one for the content in the middle and two for the spaces on the right and left side.
 
@@ -276,3 +282,6 @@ We use the **minmax()** function here to keep the content responsive. On small s
 
 [Book: CSS in Depth](https://www.manning.com/books/css-in-depth)
 
+[10 single-line CSS layouts](https://1linelayouts.glitch.me/)
+
+[CodePen: auto-fill vs auto-fit](https://codepen.io/SaraSoueidan/pen/JrLdBQ)
