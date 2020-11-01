@@ -1,0 +1,79 @@
+/*** The container on the very base level ***/
+.content-container {
+    display: grid;
+    grid-template-columns:  [full-start] minmax(2rem, 1fr)  
+                            [main-start] minmax(min-content, 80rem)
+                            /** Also possible: fixed 8-column layout **/
+                            /* [main-start] repeat(8, [col-start] minmax(min-content, 10rem) [col-end]) */ 
+                            [main-end]  minmax(2rem, 1fr) 
+                            [full-end]; 
+}
+
+/*** The wrapper that holds all the six cards ***/
+.six-cards-wrapper {
+    grid-column: main-start / main-end;
+    margin: 5rem 0;
+
+    display: grid;
+
+    /* "auto-fit": as many columns, as fit into the containier (instead a fixed number) */
+    /* WITHOUT auto-fit: "grid-template-columns: repeat(3, 1fr);" */
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: 5rem;
+    justify-items: center;
+}
+
+.card {
+    background-color: var(--color-lavender);
+
+    display: grid;
+    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    /* Content of Rows (each row in brackets): [avatar, image], [2x feature], [2x feature], [button] */
+    /* We use implicit rows here: the row-tracks have size "auto" */
+}
+
+.card__avatar {
+    background-color: var(--color-creme);
+    border: 0.2em solid #ffffff;
+    border-radius: 50%;
+    width: 5em;
+    max-width: 100%;
+
+    /* put avatar in the same grid area as the image and set a z-index to be above the image */
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 100;
+    justify-self: center;
+    align-self: start;
+    transform: translateY(-50%);
+}
+
+.card__image {
+    width: 100%;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}
+
+.card__feature {
+    display: flex; /* to display the icon and the text in one line */
+    align-items: center;
+
+    margin: 0 1em;
+    color: #ffffff;
+}
+
+.card__check-icon {
+    /* as long the support for gap in flexbox is too low (currently 70%), we have to use margin */
+    margin-right: 0.5em; 
+
+    fill: #ffffff;
+}
+
+.card__button {
+    grid-column: 1 / -1;
+
+    margin: 0 auto 2em auto;
+}

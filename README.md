@@ -194,7 +194,7 @@ If we want the tracks to have a defined height or width we can use the **propert
 
 All those examples are implemented in the grid-example-website folder.
 
-#### Creating an Overall Layout (media-queries)
+### Creating an Overall Layout (with media-queries)
 
 The overall composition of our page should look like this on desktop and on mobile:
 
@@ -234,7 +234,7 @@ With CSS grid we can create awesome layouts **without media queries** (thanks to
 
 
 
-#### Placing a full-bleed content between paragraphs
+### Placing a full-bleed content between paragraphs
 
 Sometime, we need to place content that spans all over the width of a site, while the other content stays in the middle.
 
@@ -270,9 +270,68 @@ We use the **minmax()** function here to keep the content responsive. On small s
 
 
 
-#### fixed columns that shrink with the viewport
+### Fully responsive cards without media queries
 
-## Links
+To show the biggest capability of CSS grid, we create a fully responsive layout with cards. The result should look like this:
+
+|                           Desktop                            |                            Mobile                            |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| ![responsive-cards-desktop](images\responsive-cards-desktop.png) | ![responsive-cards-mobile](images\responsive-cards-mobile.png) |
+
+The code can be found in `grid-example-website/six-cards.css`.
+
+##### 1. Base Container
+
+To **keep the content-size the same above a certain screen size**, a base grid has to be created first, in which we define grid-columns for the content and the margins (as we did with full-bleed). The margins would be between `2rem` and `1fr`.
+
+```css
+.content-container {
+    display: grid;
+    grid-template-columns:  [full-start] minmax(2rem, 1fr)  
+                            [main-start] minmax(min-content, 80rem)
+                            [main-end] minmax(2rem, 1fr) 
+                            [full-end]; 
+}
+```
+
+It would also be possible to create a grid with fixed columns ([some inspirations](https://medium.muz.li/responsive-grid-design-ultimate-guide-7aa41ca7892)). For example 8 columns with each a fixed width of maximum 10rem:
+```css
+repeat(8, minmax(min-content, 10rem))
+
+/* with named grid lines */
+[main-start] repeat(8, [col-start] minmax(min-content, 10rem) [col-end])
+```
+
+
+
+##### 2. Wrapper for all 6 cards
+
+The wrapper for the cards is also a grid. As we want 3 columns for the cards we could simply define a grid just like that:
+
+```css
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+```
+
+If we reduce the width of the viewport, we have a problem. The number of columns remains 3 and the cards become narrower.
+
+We can use `auto-fit` for that. **`auto-fit` creates as many tracks as will fit in**, without the container overflowing.
+
+```css
+.six-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: 5rem;
+}
+```
+
+The `minmax()` function defines the minimum and maximum values for the "auto-fitted" columns. As the cards itself do not have a specified with, the **grid defines the with of the card**.
+
+To prevent the cards to fill the whole width of the cell (because of the **default `stretch` behavior**), we set `justify-items: center;`.
+
+
+
+## Links 
 
 [CSS Grid Specification (W3C)](https://drafts.csswg.org/css-grid/)
 

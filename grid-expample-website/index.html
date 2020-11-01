@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,6 +7,7 @@
     <link rel="stylesheet" href="_base.css" type="text/css">
     <link rel="stylesheet" href="menu.css" type="text/css">
     <link rel="stylesheet" href="full-bleed.css" type="text/css">
+    <link rel="stylesheet" href="six-cards.css" type="text/css">
     <link rel="stylesheet" href="gallery.css" type="text/css">
   </head>
   <body class="page-container">
@@ -13,12 +15,13 @@
     <nav class="menu">
       <ul>
         <li><button onclick="showSection('.full-bleed')">Full Bleed</button></li>
-        <li><button onclick="showSection('.six-cards')">Six Cards</button></li>
+        <li><button onclick="showSection('.content-container')">Six Cards</button></li>
         <li><button onclick="showSection('.gallery')">Gallery</button></li>
       </ul> 
     </nav>
 
     <section class="content">
+
       <section class="full-bleed">
         <p>
           Skate ipsum dolor sit amet, face plant grab Primo slide fast plant transfer. 
@@ -42,28 +45,146 @@
           Freestyle 360 vert flypaper chicken wing grab. Rad acid drop flypaper shoveit slob air betty. Grind hanger kingpin mute-air Randy Ruiz impossible hurricane. 
         </p>
       </section>
-      <section class="six-cards">
-        <div class="card">
-          <img src="https://avatars.dicebear.com/api/human/1.svg" alt="Avatar 1" class="card__avatar">
-          <img src="https://picsum.photos/200/300" alt="Item Picture 1" class="card__image">
-  
-          <div class="card___feature">
-            <img class="card___check-icon" src="assets/check-circle.svg">
-            <p>Feature</p>
+
+      <section class="content-container">
+        <div class="six-cards-wrapper">
+          <div class="card">
+            <img  class="card__avatar" src="https://avatars.dicebear.com/api/human/1.svg" alt="Avatar 1">
+            <img  class="card__image" src="https://picsum.photos/seed/1/500/200" alt="Card Picture 1">
+    
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>No hidden fees</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Start living the new way</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Perfect View</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Get crystal clear audio</p>
+            </div>
+            <button class="button card__button">more info</button>
           </div>
-          <div class="card___feature">
-            <img class="card___check-icon" src="assets/check-circle.svg">
-            <p>Feature</p>
+
+          <div class="card">
+            <img  class="card__avatar" src="https://avatars.dicebear.com/api/human/2.svg" alt="Avatar 2">
+            <img  class="card__image" src="https://picsum.photos/seed/2/500/200" alt="Card Picture 2">
+    
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>No hidden fees</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Start living the new way</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Perfect View</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Get crystal clear audio</p>
+            </div>
+            <button class="button card__button">more info</button>
           </div>
-          <div class="card___feature">
-            <img class="card___check-icon" src="assets/check-circle.svg">
-            <p>Feature</p>
+
+          <div class="card">
+            <img  class="card__avatar" src="https://avatars.dicebear.com/api/human/3.svg" alt="Avatar 3">
+            <img  class="card__image" src="https://picsum.photos/seed/3/500/200" alt="Card Picture 3">
+    
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>No hidden fees</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Start living the new way</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Perfect View</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Get crystal clear audio</p>
+            </div>
+            <button class="button card__button">more info</button>
           </div>
-          <div class="card___feature">
-            <img class="card___check-icon" src="assets/check-circle.svg">
-            <p>Feature</p>
+
+          <div class="card">
+            <img  class="card__avatar" src="https://avatars.dicebear.com/api/human/4.svg" alt="Avatar 4">
+            <img  class="card__image" src="https://picsum.photos/seed/4/500/200" alt="Card Picture 4">
+    
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>No hidden fees</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Start living the new way</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Perfect View</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Get crystal clear audio</p>
+            </div>
+            <button class="button card__button">more info</button>
           </div>
-          <button class="button card__button">PICK</button>
+
+          <div class="card">
+            <img  class="card__avatar" src="https://avatars.dicebear.com/api/human/5.svg" alt="Avatar 5">
+            <img  class="card__image" src="https://picsum.photos/seed/5/500/200" alt="Card Picture 5">
+    
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>No hidden fees</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Start living the new way</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Perfect View</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Get crystal clear audio</p>
+            </div>
+            <button class="button card__button">more info</button>
+          </div>
+
+          <div class="card">
+            <img  class="card__avatar" src="https://avatars.dicebear.com/api/human/6.svg" alt="Avatar 6">
+            <img  class="card__image" src="https://picsum.photos/seed/6/500/200" alt="Card Picture 6">
+    
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>No hidden fees</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Start living the new way</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Perfect View</p>
+            </div>
+            <div class="card__feature">
+              <img class="card__check-icon" src="assets/check-circle.svg">
+              <p>Get crystal clear audio</p>
+            </div>
+            <button class="button card__button">more info</button>
+          </div>
         </div>
 
       </section>
