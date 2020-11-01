@@ -1,5 +1,5 @@
 .full-bleed {
-    /*  research has shown that the ideal line length is 65 characters,
+    /*  research has shown that the ideal line length for reading is 65 characters,
         so the main column has a width of 65ch */
     display: grid;
     grid-template-columns:  [full-start] minmax(2rem, 1fr)  
