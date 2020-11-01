@@ -1,5 +1,5 @@
 /*** The container on the very base level ***/
-.six-cards-container {
+.content-container {
     display: grid;
     grid-template-columns:  [full-start] minmax(2rem, 1fr)  
                             [main-start] minmax(min-content, 80rem)
