@@ -295,6 +295,7 @@ To **keep the content-size the same above a certain screen size**, a base grid h
 ```
 
 It would also be possible to create a grid with fixed columns ([some inspirations](https://medium.muz.li/responsive-grid-design-ultimate-guide-7aa41ca7892)). For example 8 columns with each a fixed width of maximum 10rem:
+
 ```css
 repeat(8, minmax(min-content, 10rem))
 
@@ -331,6 +332,61 @@ To prevent the cards to fill the whole width of the cell (because of the **defau
 
 
 
+### Creating a gallery (figures as grid items)
+With grid, it is very easy to create a gallery with each image being the child of a `<figure>` Element.
+
+![gallery](images\gallery.png)
+
+We define the columns with `auto-fit`, as we want that the grid will place as many tracks as it can fit. By specifying `minmax(150px, 1fr)`,  the tracks will never be smaller than 150px.
+
+To ensure, that the implicit grid-rows are all the same height, we add the declaration `grid-auto-rows: 1fr;`. The declaration `grid-auto-flow: dense;` makes it possible to fill the empty spaces with an image.
+
+```css
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    
+    grid-auto-rows: 1fr;
+    grid-auto-flow: dense;
+    gap: 1rem;
+    margin: 1rem;
+}
+```
+
+To keep the aspect ratio of the image with `object-fit`, we add the following declaration block:
+
+```css
+.gallery > figure > img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+```
+
+And to create a certain variety in image sizes, we can span some of our images along the tracks:
+
+```css
+.gallery > figure:nth-child(3n) {
+    grid-column: span 2;
+    grid-row: span 2;
+} 
+
+.gallery > figure:nth-child(6n) {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+```
+
+
+
+## Most important grid features
+
+**[`repeat()`](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat):** Define a recurring pattern for a large number of grid tracks
+
+**`auto-fit`:** A special keyword for `repeat()`. The grid creates as many tracks as possible without overflowing the container. You can also use `auto-fill`, but this can result in some empty grid-tracks ([CSS Tricks: auto-fill vs auto-fit](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/)).
+
+**[`minmax()`](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax):**  It specifies a minimum and a maximum value. The browser will ensure, that the size falls between these values.
+
 ## Links 
 
 [CSS Grid Specification (W3C)](https://drafts.csswg.org/css-grid/)
@@ -342,5 +398,3 @@ To prevent the cards to fill the whole width of the cell (because of the **defau
 [Book: CSS in Depth](https://www.manning.com/books/css-in-depth)
 
 [10 single-line CSS layouts](https://1linelayouts.glitch.me/)
-
-[CodePen: auto-fill vs auto-fit](https://codepen.io/SaraSoueidan/pen/JrLdBQ)
