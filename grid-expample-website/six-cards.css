@@ -4,7 +4,7 @@
     grid-template-columns:  [full-start] minmax(2rem, 1fr)  
                             [main-start] minmax(min-content, 80rem)
                             /** Also possible: fixed 8-column layout **/
-                            /* [main-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) */ 
+                            /* [main-start] repeat(8, [col-start] minmax(min-content, 10rem) [col-end]) */ 
                             [main-end]  minmax(2rem, 1fr) 
                             [full-end]; 
 }
@@ -16,7 +16,8 @@
 
     display: grid;
 
-    /* auto-fit: as many columns, as fit into the containier (instead a fixed number) */
+    /* "auto-fit": as many columns, as fit into the containier (instead a fixed number) */
+    /* WITHOUT auto-fit: "grid-template-columns: repeat(3, 1fr);" */
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     grid-gap: 5rem;
     justify-items: center;
