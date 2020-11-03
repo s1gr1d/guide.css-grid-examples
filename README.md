@@ -4,6 +4,41 @@ The CSS-Grid lets you define a two-dimensional layout of columns and rows. You c
 
 
 
+**-- Table of Contents --**
+
+- [Grid Terminology](#Grid-Terminology)
+
+- [A basic grid](#A-basic-grid)
+
+
+- [Positioning Grid Items](#Positioning-Grid-Items)
+
+- [Alternate Syntaxes](#Alternate-Syntaxes)
+	- [Naming Grid Lines](#Naming-Grid-Lines)
+	- [Naming Grid Areas](#Naming-Grid-Areas)
+	
+- [Implicit and Explicit Grid](#Implicit-and-Explicit-Grid)
+
+   
+
+- [Grid Examples from Practice](#Grid-Examples-from-Practice)
+
+	- [Creating an Overall Layout (with media-queries)](#Creating-an-Overall-Layout-(with-media-queries))
+
+	- [Placing a full-bleed content between paragraphs](#Placing-a-full-bleed-content-between-paragraphs)
+
+	- [Fully responsive cards without media queries](#Fully-responsive-cards-without-media-queries)
+
+	- [Creating a gallery (figures as grid items)](#Creating-a-gallery-(figures-as-grid-items))
+
+     
+
+- [Most important grid features](#Most-important-grid-features)
+
+- [Links](#Links)
+
+
+
 ## Grid Terminology
 
 - **Grid Container:** The element on which `display: grid` is applied. It's the direct parent of all grid items.
@@ -386,6 +421,8 @@ And to create a certain variety in image sizes, we can span some of our images a
 **`auto-fit`:** A special keyword for `repeat()`. The grid creates as many tracks as possible without overflowing the container. You can also use `auto-fill`, but this can result in some empty grid-tracks ([CSS Tricks: auto-fill vs auto-fit](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/)).
 
 **[`minmax()`](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax):**  It specifies a minimum and a maximum value. The browser will ensure, that the size falls between these values.
+
+
 
 ## Links 
 
