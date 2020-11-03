@@ -174,7 +174,7 @@ In this example we define a 2x2 grid and let the placement algorithm fill the re
 
 
 
-![implicit_explicit](images\implicit_explicit.png)
+![implicit_explicit](images/implicit_explicit.png)
 
 
 
@@ -184,7 +184,7 @@ The items are added as rows per default. We can change how the auto-placed items
 
 The right image would be an example for `grid-auto-flow: row dense` (from MDN):
 
-![row-dense](images\row-dense.png)
+![row-dense](images/row-dense.png)
 
 #### -- Sizing the implicit tracks --
 
@@ -198,7 +198,7 @@ All those examples are implemented in the grid-example-website folder.
 
 The overall composition of our page should look like this on desktop and on mobile:
 
-![overall-layout](images\overall-layout.png)
+![overall-layout](images/overall-layout.png)
 
 To accomplish such a layout, we have to define a column with a **fixed width for the menu** and a column for the content. The menu should switch to the top, when the screen gets smaller.  For the footer, we can just use the `min-content` value.
 
@@ -238,7 +238,7 @@ With CSS grid we can create awesome layouts **without media queries** (thanks to
 
 Sometime, we need to place content that spans all over the width of a site, while the other content stays in the middle.
 
-![full-bleed](images\full-bleed.png)
+![full-bleed](images/full-bleed.png)
 
 Research has shown that the **ideal line-length for reading is 45-85 characters**, so we give the main column a width of 70ch.
 
@@ -276,7 +276,7 @@ To show the biggest capability of CSS grid, we create a fully responsive layout 
 
 |                           Desktop                            |                            Mobile                            |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| ![responsive-cards-desktop](images\responsive-cards-desktop.png) | ![responsive-cards-mobile](images\responsive-cards-mobile.png) |
+| ![responsive-cards-desktop](images/responsive-cards-desktop.png) | ![responsive-cards-mobile](images/responsive-cards-mobile.png) |
 
 The code can be found in `grid-example-website/six-cards.css`.
 
@@ -335,7 +335,7 @@ To prevent the cards to fill the whole width of the cell (because of the **defau
 ### Creating a gallery (figures as grid items)
 With grid, it is very easy to create a gallery with each image being the child of a `<figure>` Element.
 
-![gallery](images\gallery.png)
+![gallery](images/gallery.png)
 
 We define the columns with `auto-fit`, as we want that the grid will place as many tracks as it can fit. By specifying `minmax(150px, 1fr)`,  the tracks will never be smaller than 150px.
 
