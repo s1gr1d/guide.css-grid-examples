@@ -3,7 +3,7 @@
     margin: 1em 0;
 
     display: grid;
-    grid-gap: 1em 0; /* just row gap */
+    gap: 1em 0; /* just row gap */
     justify-items: center; 
     align-items: center;
 }
@@ -14,7 +14,7 @@
 
         justify-content: start;
         grid-auto-flow: column;
-        grid-gap: 0 1em;
+        gap: 0 1em;
     }
 }
 

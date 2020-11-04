@@ -9,8 +9,8 @@
     grid-template-rows: repeat(4, 150px); 
       
     /* GAP FOR EACH ROW AND COLUMN
-    grid-row-gap: 30px; 
-    grid-column-gap: 50px; */
+    row-gap: 30px; 
+    column-gap: 50px; */
     gap: 2em;
   }
   

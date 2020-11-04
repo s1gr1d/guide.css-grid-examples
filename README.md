@@ -56,7 +56,7 @@ The CSS-Grid lets you define a two-dimensional layout of columns and rows. You c
 
 Following code creates a 2x2 grid with green items. A grid container always **behaves like a block display element**, filling 100% of the available width. After declaring the grid-template properties, the grid gets filled with the children of the container.
 
-The **length unit `fr` (fraction)** behaves like the `flex-grow` factor in flexbox and slices the grid up into proportional columns or rows. You could also define the columns/rows in this example with  `25%` percent each, but this has two issues: we have to calculate the amount of percent by ourselves and by adding a `grap` we get problems with overflow, as our grid gets wider as `100%`.
+The **length unit `fr` (fraction)** behaves like the `flex-grow` factor in flexbox and slices the grid up into proportional columns or rows. You could also define the columns/rows in this example with  `25%` percent each, but this has two issues: we have to calculate the amount of percent by ourselves and by adding a `gap` we get problems with overflow, as our grid gets wider as `100%`.
 
 ```html
 <div class="container">
@@ -199,7 +199,7 @@ In this example we define a 2x2 grid and let the placement algorithm fill the re
     display: grid;
     grid-template-rows: repeat(2, 100px);
     grid-template-columns: repeat(2, 300px);
-    grid-gap: 30px;
+    gap: 30px;
     
     /* height: 1000px;  
        --> if we would define a height, the items in the implicit grid use more height to 			 fill the 1000px
@@ -357,7 +357,7 @@ We can use `auto-fit` for that. **`auto-fit` creates as many tracks as will fit 
 .six-cards-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    grid-gap: 5rem;
+    gap: 5rem;
 }
 ```
 
@@ -372,27 +372,27 @@ With grid, it is very easy to create a gallery with each image being the child o
 
 ![gallery](images/gallery.png)
 
-We define the columns with `auto-fit`, as we want that the grid will place as many tracks as it can fit. By specifying `minmax(150px, 1fr)`,  the tracks will never be smaller than 150px.
+We define the columns with `auto-fit`, as we want that the grid will place as many tracks as it can fit. By specifying `minmax(10vw, 1fr)`,  the tracks will never be smaller than 10% of the viewport width. As the rows (we define later on) are 10vw in height, this is the minimum value for the `minmax`, to keep the pictures in a square.
 
-To ensure, that the implicit grid-rows are all the same height, we add the declaration `grid-auto-rows: 1fr;`. The declaration `grid-auto-flow: dense;` makes it possible to fill the empty spaces with an image.
+To ensure, that the implicit grid-rows are all the same height, we add the declaration `grid-auto-rows: 10vw;`. The declaration `grid-auto-flow: dense;` makes it possible to fill the empty spaces with an image.
 
 ```css
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
     
-    grid-auto-rows: 1fr;
+    grid-auto-rows: 10vw;
     grid-auto-flow: dense;
     gap: 1rem;
     margin: 1rem;
 }
 ```
 
-To keep the aspect ratio of the image with `object-fit`, we add the following declaration block:
+To **keep the aspect ratio of the image** with `object-fit`, we add the following declaration block:
 
 ```css
 .gallery > figure > img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -433,5 +433,7 @@ And to create a certain variety in image sizes, we can span some of our images a
 [WebKit Blog - Grid Layout ](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/)
 
 [Book: CSS in Depth](https://www.manning.com/books/css-in-depth)
+
+[CSS Grid Cheat Sheet](https://github.com/alsacreations/guidelines/blob/master/grid-cheatsheet.pdf)
 
 [10 single-line CSS layouts](https://1linelayouts.glitch.me/)
